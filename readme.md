@@ -1,0 +1,1 @@
+The purpose of this app is to fulfill Backend-Engineer test from Qupas Id.
