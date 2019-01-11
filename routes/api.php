@@ -19,6 +19,8 @@ Route::post('register', 'UserApiController@register');
 
 Route::group(['middleware' => 'auth.jwt'], function () {
     Route::get('logout', 'UserApiController@logout');
- 
     Route::get('user', 'UserApiController@getAuthUser');
+    Route::get('transaction', 'TransactionController@index');
+    Route::post('transaction', 'TransactionController@store');
+    Route::get('transaction/{id}', 'TransactionController@show');
 });

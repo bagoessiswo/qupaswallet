@@ -20,6 +20,7 @@ class UserApiController extends Controller
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+        $user->phone = $request->phone;
         $user->save();
  
         if ($this->loginAfterSignUp) {
